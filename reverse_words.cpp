@@ -13,10 +13,11 @@ vector<int> reverse(string s){
         }
         reverse(word.begin(),word.end());
         if(word.size()>0){
-            ans += " "+word;
+            if(ans.size()>0) ans += " ";
+            ans += word;
         }
     }
-    return ans.substr(1);
+    return ans;
 }
 
 int main(){
